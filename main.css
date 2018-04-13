@@ -1,0 +1,22 @@
+/* html, */
+body {
+  height: auto;
+  background-image: url('https://www.wallpaperup.com/uploads/wallpapers/2013/08/28/139975/7d64d84d499b26ed32601b80c6c6fb66-1400.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.quiz-start .btn,
+.finish-line .restart {
+  background-color: red;
+  border: none;
+}
+
+header h1 {
+  font-size: 80px;
+  font-weight: bold;
+  color: #1864e0;
+}
+
+input:required
+
