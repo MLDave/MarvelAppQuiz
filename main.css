@@ -18,5 +18,7 @@ header h1 {
   color: #1864e0;
 }
 
-input:required
 
+.form-check {
+  height: 40px;
+}

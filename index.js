@@ -9,9 +9,7 @@ function generateQuestion() {
     if (questionNumber < STORE.length) {
         return `<div class="question-${questionNumber} question-form">
       <h2>${STORE[questionNumber].question}</h2>
-      <form>
-      
-        <p class="card-text">
+      <form class="card-text">
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="${STORE[questionNumber].answers[0]}" checked>
                 <label class="form-check-label" for="exampleRadios1">
@@ -25,18 +23,18 @@ function generateQuestion() {
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="${STORE[questionNumber].answers[2]}">
-                <label class="form-check-label" for="exampleRadios2">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="${STORE[questionNumber].answers[2]}">
+                <label class="form-check-label" for="exampleRadios3">
                 ${STORE[questionNumber].answers[2]}
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="${STORE[questionNumber].answers[3]}">
-                <label class="form-check-label" for="exampleRadios2">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="${STORE[questionNumber].answers[3]}">
+                <label class="form-check-label" for="exampleRadios4">
                 ${STORE[questionNumber].answers[3]}
                 </label>
             </div>
-        </p>
+    
         <a href="#" class="btn btn-primary finished answered">Submit</a>
       </form>
       </div>`;
@@ -95,7 +93,6 @@ function userAnswerFeedbackWrong() {
     $('.feed-back-title').text('Sorry!');
 }
 
-
 // gives the result of the answered question and updates that scores
 function ifAnswerIsCorrect() {
     userAnswerFeedbackCorrect();
@@ -114,7 +111,6 @@ function changeQuestionNumber() {
     $('.question-number').text(questionNumber + 1);
 }
 
-
 //what happens when the user clicks next
 function renderNextQuestion() {
     $('.container').on('click', '.next', function (event) {
@@ -127,7 +123,6 @@ function renderNextQuestion() {
         if (questionNumber >= 10) {
             $('form').remove();
             $('.finish-line').show();
-            // $('.resultScore').text(`Congratulations!! your score is ${win}!!!`);
             if (win >= 8) {
                 $('.resultScore').text(`Congratulations! You are Super! You got ${win}/10`);
             } else if (score < 8 && score >= 5) {
@@ -152,9 +147,6 @@ function restartQuiz() {
 
 
 
-
-
-
 //run quiz functions
 function createQuiz() {
     startQuiz();
@@ -164,3 +156,15 @@ function createQuiz() {
 }
 
 $(createQuiz);
+
+
+
+// $("#formsubmit").click(function () {
+//     $("#myform").hide();
+//     $("#myresults").text($("#mytext").val());
+//     $("#myresultsWrap").show();
+// });
+// $("#toform").click(function () {
+//     $("#myresultsWrap").hide();
+//     $("#myform").show();
+// });
